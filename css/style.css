@@ -172,11 +172,6 @@ em { font-style: italic; color: var(--gold); }
 
 .full-width { width: 100%; }
 
-.side-switcher-seamoss {
-  background: linear-gradient(90deg, #fbbf24, #f97316);
-  color: #431407;
-}
-
 /* ============================================
    SEA MOSS NAVBAR
    ============================================ */
