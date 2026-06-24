@@ -176,6 +176,10 @@ em { font-style: italic; color: var(--gold); }
    SEA MOSS NAVBAR
    ============================================ */
 
+.side-switcher-seamoss {
+  background: linear-gradient(90deg, #fbbf24, #f97316);
+  color: #431407;
+}
 .navbar {
   position: fixed;
   top: 0; left: 0; right: 0;
