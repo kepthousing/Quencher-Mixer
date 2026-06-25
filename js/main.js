@@ -73,20 +73,24 @@ function toggleFaq(btn) {
 }
 
 // ===== EMAIL SIGNUP =====
-function handleSignup(e) {
+async function handleSignup(e) {
   e.preventDefault();
   const form = document.getElementById('signup-form');
   const success = document.getElementById('signup-success');
-  const email = document.getElementById('email-input').value;
-
-  if (!email) return;
-
-  // In a real deployment, replace this with your email service (Mailchimp, ConvertKit, etc.)
-  // Example: POST to your email marketing API here
-  console.log('Signup email:', email);
-
-  form.style.display = 'none';
-  success.style.display = 'block';
+  const data = new FormData(form);
+  try {
+    const res = await fetch('https://formspree.io/f/xvzjplyv', {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+      form.style.display = 'none';
+      success.style.display = 'block';
+    }
+  } catch(err) {
+    console.error(err);
+  }
 }
 
 // ===== SMOOTH ANCHOR SCROLL (offset for fixed navbar) =====
