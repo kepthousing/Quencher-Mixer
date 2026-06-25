@@ -817,6 +817,16 @@ em { font-style: italic; color: var(--gold); }
 }
 .side-switcher-btn-green:hover { background: #2d5a3d; transform: translateY(-1px); }
 
+.side-switcher-seamoss {
+  background: linear-gradient(90deg, #fbbf24, #f97316);
+  color: #431407;
+}
+.side-switcher-btn-orange {
+  background: #431407;
+  color: #fff;
+}
+.side-switcher-btn-orange:hover { background: #1c0a00; transform: translateY(-1px); }
+
 /* ===== LEMONADE NAVBAR ===== */
 .lemonade-body .lem-nav {
   position: sticky;
